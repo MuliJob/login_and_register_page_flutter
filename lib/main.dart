@@ -1,4 +1,4 @@
-import 'package:crime_free/screens/signin_screen.dart';
+import 'package:crime_app/screens/signin_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
