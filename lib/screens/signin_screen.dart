@@ -1,4 +1,3 @@
-
 import 'package:crime_app/reusable_widgets/reusable_widgets.dart';
 import 'package:crime_app/screens/signup_screen.dart';
 import 'package:crime_app/utils/color_utils.dart';
@@ -12,8 +11,11 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
-  TextEditingController _passwordTextController = TextEditingController();
-  TextEditingController _emailTextController = TextEditingController();
+  //two text editing controllers
+
+  //text editing controller to control when we enter data
+  final username = TextEditingController();
+  final password = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +24,7 @@ class _SignInScreenState extends State<SignInScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: const Text(
-          "Crime Free",
+          "Crime Application",
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
       ),
@@ -45,13 +47,19 @@ class _SignInScreenState extends State<SignInScreen> {
               SizedBox(
                 height: 30,
               ),
-              reusableTextField("Enter Username", Icons.person_outline, false,
-                  _emailTextController),
+              reusableTextField(
+                "Enter Username",
+                Icons.person_outline,
+                false,
+              ),
               SizedBox(
                 height: 20,
               ),
-              reusableTextField("Enter Password", Icons.lock_outline, true,
-                  _passwordTextController),
+              reusableTextField(
+                "Enter Password",
+                Icons.lock_outline,
+                true, 
+              ),
               SizedBox(
                 height: 20,
               ),
